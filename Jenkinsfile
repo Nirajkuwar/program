@@ -1,23 +1,17 @@
+@Library ('my-shared-library') _
+
 pipeline {
     agent any
 
     stages {
 
-        stage('Tests') {
-            parallel {
-
-                stage('Unit') {
-                    steps {
-                        sh 'echo Running unit tests'
-                    }
-                }
-
-                stage('Integration') {
-                    steps {
-                        sh 'echo Running integration tests'
-                    }
-                }
-            }
+        stage('Build') {
+            steps
+                echo 'Building'
+           }
         }
     }
 }
+
+
+                
